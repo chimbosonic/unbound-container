@@ -21,6 +21,7 @@ Please read docker-compose.yml before running the following
 ```bash
 docker-compose up -d
 ```
+This should make unbound available on port `53`
 
 ### How to build
 This will build the container.
@@ -35,5 +36,6 @@ The default config inside this container has been made to suit my needs:
   - IPv6 and IPv4 enabled both listenning and for queries
   - Some Local Zones have been enabled (.internal)
   - Blacklists advertising domains and malware domains
+  - Any IP can make a query !! (This might not be secure in your environment. I use a firewall to block unwanted access)
 
 You can overwite these by mounting `/var/unbound/etc` and putting in your configs inside the mounted volume.
