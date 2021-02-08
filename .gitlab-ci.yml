@@ -18,7 +18,8 @@ Build image:
   only:
     changes:
       - Dockerfile
-      - scripts/**
+      - config/**
+      - installer.sh
   script:
     - export TIME_STAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
     - docker build --build-arg BUILD_DATE=$TIME_STAMP --build-arg VCS_REF=$CI_COMMIT_SHORT_SHA -t $IMAGE_NAME -t $IMAGE_NAME:$CI_COMMIT_SHORT_SHA .
@@ -32,7 +33,8 @@ Release image:
       - master
     changes:
       - Dockerfile
-      - scripts/**  
+      - config/**
+      - installer.sh
   script:
     - docker pull $IMAGE_NAME:$CI_COMMIT_SHORT_SHA
     - docker tag $IMAGE_NAME:$CI_COMMIT_SHORT_SHA $IMAGE_NAME:latest
