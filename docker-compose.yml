@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cgit:
+    container_name: unbound
+    image: chimbosonic/unbound:latest
+    ports:
+      - "53:5353/tcp"
+      - "53:5353/udp"
+    restart: always
