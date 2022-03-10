@@ -1,4 +1,4 @@
-# Unbound Container
+# Unbound OCI image
 ![pipeline status](https://github.com/chimbosonic/unbound-container/actions/workflows/main.yml/badge.svg?branch=main)
 
 This is a unbound OCI image built using https://github.com/NLnetLabs/unbound.
