@@ -1,0 +1,7 @@
+README.md
+.git
+Makefile
+LICENSE
+docker-compose.yml
+.github
+cosign.pub
