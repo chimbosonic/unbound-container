@@ -1,9 +1,9 @@
 # Unbound Container
 ![pipeline status](https://github.com/chimbosonic/unbound-container/actions/workflows/main.yml/badge.svg?branch=main)
 
-This is a unbound OCI image built using https://github.com/NLnetLabs/unbound
-This image has a fully setup unbound server that is configured for Recursive Resolution (It does not use any other DNS provider just the dns roots).
-It also blocks Ad and malware domains.
+This is a unbound OCI image built using https://github.com/NLnetLabs/unbound.
+
+This image has a fully setup unbound server that is configured for Recursive Resolution (It does not use any other DNS provider just the dns roots). It also blocks Ad and malware domains.
 
 Base image is alpine:latest.
 
