@@ -21,7 +21,6 @@ cosign verify --key cosign.pub chimbosonic/unbound:latest
 
 ## Running it
 ### plain docker
-Feel free to change the port and folder that contains your repos.
 
 ```bash
 docker run -it  --rm -p 5353:5353 --name unbound -t chimbosonic/unbound:latest
