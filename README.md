@@ -3,7 +3,7 @@
 
 This is a unbound OCI image built using https://github.com/NLnetLabs/unbound.
 
-This image has a fully setup unbound server that is configured for Recursive Resolution (It does not use any other DNS provider just the dns roots). It also blocks Ad and malware domains.
+This image has a fully setup unbound server that is configured for Recursive Resolution (It does not use any other DNS provider just the dns roots). It also blocks Ad and malware domains. Unbound will run unprivileged in the container and listen port 5353 for UDP and TCP. 
 
 Base image is alpine:latest.
 
@@ -23,7 +23,7 @@ cosign verify --key cosign.pub chimbosonic/unbound:latest
 ### plain docker
 
 ```bash
-docker run -it  --rm -p 5353:5353 --name unbound -t chimbosonic/unbound:latest
+docker run -it  --rm -p 53:5353/tcp -p 53:5353/udp --name unbound chimbosonic/unbound:latest
 ```
 
 ### docker-compose
@@ -32,7 +32,6 @@ Please read docker-compose.yml before running the following
 ```bash
 docker-compose up -d
 ```
-This should make unbound available on port `53`
 
 ### How to build
 This will build the container.
