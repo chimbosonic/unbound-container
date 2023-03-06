@@ -7,7 +7,9 @@ This image has a fully setup unbound server that is configured for Recursive Res
 
 Base image is alpine:latest.
 
-The image is available on Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/unbound)
+The image can be pulled from the following repositories:
+- Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/unbound)
+- Quay.io [here](https://quay.io/repository/chimbosonic/unbound)
 
 Source code and pipeline can be found [here](https://github.com/chimbosonic/unbound-container)
 
