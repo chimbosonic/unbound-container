@@ -5,7 +5,7 @@ WORKDIR /root
 RUN ln -s /usr/bin/python3 /usr/bin/python \
     && git clone --depth 1 https://github.com/opencoff/unbound-adblock.git \
     && cd unbound-adblock \
-    && gmake
+    && gmake || gmake
 
 FROM alpine:latest
 
